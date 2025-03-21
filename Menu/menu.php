@@ -73,7 +73,7 @@ $status = $dbQuery->executeThirdyQuery($_SESSION['cid']);
                 </div>
             </a>
             <!-- Link para chamados TI, abrindo em nova aba -->
-            <a href="http://192.168.10.191" target="_blank" id="optionChamados">
+            <a href="http://192.168.10.***" target="_blank" id="optionChamados">
                 <div class="option">
                     Chamados TI
                 </div>
@@ -85,7 +85,7 @@ $status = $dbQuery->executeThirdyQuery($_SESSION['cid']);
                 </div>
             </a>
             <!-- Link para o portal de OPS, abrindo em nova aba -->
-            <a href="http://192.168.10.194:8080/madepar/" target="_blank" id="optionPortalOPS">
+            <a href="http://192.168.10.***:****/madepar/" target="_blank" id="optionPortalOPS">
                 <div class="option">
                     Portal de OPS
                 </div>

@@ -1,0 +1,77 @@
+.full-screen {
+    background-color: #FCFCFC;
+    height: calc(var(--vh, 1vh) *100);
+    overflow: hidden;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+#logo {
+    width: 20%;
+    object-fit: contain;
+    animation: float 5s ease-in-out infinite;
+    min-width: 120px;
+}
+
+#text{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 50%;
+}
+#section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+#instru{
+    font-size:medium;
+    font-family: Nunito, sans-serif;
+    color: #4a5c60;
+}
+span{
+    color: #045b8f;
+}
+#welcome{
+    width: auto;
+    color: #4a5c60 ;
+    font-size:xx-large;
+    font-family: Nunito, sans-serif;
+}
+@media(max-width: 380px){
+    #welcome{
+        font-size: x-large;
+    }
+} 
+/* Regra do CSS que permite definir uma animação */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    25% {
+        transform: translateY(-15px);
+    }
+    50% {
+        transform: translateY(0px);
+    }
+    75%{
+        transform: translateY(15px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}   
+
+#julio {
+    min-height: 180px;
+    height: 30%;
+    max-height: 412px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+@media(max-width: 570px){
+}

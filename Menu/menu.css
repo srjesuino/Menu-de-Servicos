@@ -1,0 +1,272 @@
+/* Estiliza o corpo da página */
+body {
+    display: flex; /* Usa flexbox para layout */
+    margin: 0; /* Remove margens padrão */
+    overflow: auto; /* Permite rolagem se necessário */
+    height: calc(var(--vh, 1vh) * 100); /* Define altura como 100% da viewport */
+}
+
+/* Estiliza a barra lateral */
+#sidebar {
+    height: 100%; /* Altura total da página */
+    display: flex; /* Usa flexbox para organizar conteúdo */
+    flex-direction: column; /* Alinha itens em coluna */
+    text-align: center; /* Centraliza texto */
+    width: 35%; /* Largura inicial de 35% */
+    max-width: 200px; /* Largura máxima de 200px */
+    background-color: #58af9c; /* Cor de fundo verde */
+    border-right: solid 1px rgb(163, 158, 158); /* Borda direita cinza */
+    border-top-right-radius: 12px; /* Canto superior direito arredondado */
+    border-bottom-right-radius: 12px; /* Canto inferior direito arredondado */
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px; /* Sombra estilizada */
+    position: fixed; /* Fixa a barra na tela */
+    left: -150px; /* Esconde a barra fora da tela à esquerda */
+    transition: left 0.5s ease; /* Transição suave para a posição */
+}
+
+/* Comportamento da barra lateral ao passar o mouse */
+#sidebar:hover {
+    transition-delay: 30ms; /* Pequeno atraso na transição */
+    left: 0; /* Move a barra para a posição visível */
+}
+
+/* Desativa eventos de clique nas opções por padrão */
+#options {
+    pointer-events: none; /* Impede interação com as opções */
+}
+
+/* Controla a opacidade inicial de opções, login e pin */
+#sidebar #options,
+#sidebar #login, 
+#pin {
+    opacity: 0; /* Inicia invisível */
+    transition: opacity 0.3s ease; /* Transição suave para opacidade */
+}
+
+/* Torna opções, login e pin visíveis ao passar o mouse */
+#sidebar:hover #options,
+#sidebar:hover #login,
+#sidebar:hover #pin {
+    opacity: 1; /* Torna visível */
+}
+
+/* Estiliza o container de conteúdo principal */
+#conteudo {
+    width: 100%; /* Largura total */
+    overflow: hidden; /* Esconde overflow */
+    margin: 0; /* Remove margens */
+    margin-left: 50px; /* Margem inicial à esquerda */
+    transition: margin-left 0.5s ease; /* Transição suave para margem */
+}
+
+/* Ajusta a margem do conteúdo quando a barra é exibida */
+#sidebar:hover + #conteudo {
+    transition-delay: 50ms; /* Pequeno atraso na transição */
+    margin-left: 200px; /* Aumenta a margem para acomodar a barra */
+}
+
+/* Estiliza o iframe */
+iframe {
+    border: none; /* Remove bordas */
+    margin: 0; /* Remove margens */
+    height: 100%; /* Altura total */
+    width: 100%; /* Largura total */
+}
+
+/* Estiliza os itens dentro de #options */
+#options div {
+    margin-top: 10px; /* Margem superior */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    border-radius: 3px; /* Bordas arredondadas */
+    font-family: Nunito, sans-serif; /* Usa fonte Nunito */
+}
+
+/* Estiliza o logotipo */
+#logo {
+    width: 50%; /* Largura de 50% */
+    margin-top: 30px; /* Margem superior */
+    margin-bottom: 30px; /* Margem inferior */
+    margin-left: 1px; /* Pequena margem à esquerda */
+}
+
+/* Estiliza os links */
+a {
+    text-decoration: none; /* Remove sublinhado */
+    color: azure; /* Cor do texto */
+}
+
+/* Efeito hover para opções e subopções */
+.option:hover, 
+.subOption:hover {
+    background-color: rgb(139, 207, 235); /* Cor de fundo ao passar o mouse */
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset; /* Sombra estilizada */
+}
+
+/* Estiliza o container de opções */
+#options {
+    border-top: 1px solid rgb(163, 158, 158); /* Borda superior */
+    border-bottom: 1px solid rgb(163, 158, 158); /* Borda inferior */
+    height: 100%; /* Altura total */
+    background-color: #58af86; /* Cor de fundo */
+    overflow: auto; /* Permite rolagem vertical */
+    overflow-x: hidden; /* Esconde rolagem horizontal */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset; /* Sombra interna */
+}
+
+/* Define a fonte Nunito personalizada */
+@font-face {
+    font-family: Nunito; /* Nome da fonte */
+    src: url("Nunito_Sans/NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.ttf"); /* Caminho do arquivo da fonte */
+}
+
+/* Estiliza o texto de informações de login */
+#data-login {
+    color: aliceblue; /* Cor do texto */
+    font-size: 15px; /* Tamanho da fonte */
+    align-self: center; /* Centraliza no container */
+    font-family: Nunito; /* Usa fonte Nunito */
+    margin-top: 12px; /* Margem superior */
+}
+
+/* Estiliza o botão de logout */
+#logout {
+    background-color: transparent; /* Fundo transparente */
+    border: none; /* Sem borda */
+    width: 50px; /* Largura fixa */
+    height: 50px; /* Altura fixa */
+    align-self: center; /* Centraliza no container */
+}
+
+/* Estiliza a imagem dentro do botão de logout */
+#logout img {
+    width: 22px; /* Largura da imagem */
+    margin: 0; /* Remove margens */
+}
+
+/* Estiliza o container de login */
+#login {
+    display: flex; /* Usa flexbox */
+    flex-direction: column; /* Alinha itens em coluna */
+    background-color: #58af86; /* Cor de fundo */
+    border-bottom-right-radius: 8px; /* Canto inferior direito arredondado */
+}
+
+/* Efeito hover no botão de logout */
+#logout:hover {
+    cursor: pointer; /* Muda o cursor para pointer */
+}
+
+/* Aumenta o tamanho da imagem no hover do logout */
+#logout:hover img {
+    width: 23px; /* Aumenta ligeiramente a imagem */
+}
+
+/* Estiliza o elemento #mao (não usado no HTML fornecido) */
+#mao {
+    width: 30px; /* Largura fixa */
+    position: absolute; /* Posicionamento absoluto */
+    right: 5px; /* Distância da direita */
+    top: 50%; /* Centraliza verticalmente */
+    transform: rotate(180deg); /* Rotaciona 180 graus */
+    transition: opacity 0.3s ease; /* Transição suave para opacidade */
+}
+
+/* Media query para telas menores que 720px */
+@media (max-width: 720px) {
+    #sidebar {
+        height: 100%; /* Mantém altura total */
+    }
+}
+
+/* Estiliza as opções e subopções */
+.option, 
+.subOption {
+    cursor: pointer; /* Muda o cursor para pointer */
+    color: azure; /* Cor do texto */
+    height: auto; /* Altura automática */
+    padding: 10px; /* Espaçamento interno */
+}
+
+/* Estiliza o container de subopções */
+.subOptions {
+    display: none; /* Esconde por padrão */
+    flex-direction: column; /* Alinha itens em coluna */
+}
+
+/* Estiliza a barra de rolagem */
+*::-webkit-scrollbar {
+    height: 10px; /* Altura da barra horizontal */
+    width: 10px; /* Largura da barra vertical */
+}
+
+/* Estiliza a trilha da barra de rolagem */
+*::-webkit-scrollbar-track {
+    border-radius: 5px; /* Bordas arredondadas */
+    background-color: #58AF86; /* Cor de fundo */
+}
+
+/* Efeito hover na trilha da barra de rolagem */
+*::-webkit-scrollbar-track:hover {
+    background-color: #B8C0C2; /* Cor ao passar o mouse */
+}
+
+/* Efeito ativo na trilha da barra de rolagem */
+*::-webkit-scrollbar-track:active {
+    background-color: #B8C0C2; /* Cor ao clicar */
+}
+
+/* Estiliza o polegar da barra de rolagem */
+*::-webkit-scrollbar-thumb {
+    border-radius: 5px; /* Bordas arredondadas */
+    background-color: #397524; /* Cor do polegar */
+}
+
+/* Efeito hover no polegar da barra de rolagem */
+*::-webkit-scrollbar-thumb:hover {
+    background-color: #62A34B; /* Cor ao passar o mouse */
+}
+
+/* Efeito ativo no polegar da barra de rolagem */
+*::-webkit-scrollbar-thumb:active {
+    background-color: #62A34B; /* Cor ao clicar */
+}
+
+/* Adiciona padding ao container de opções */
+#options {
+    padding: 20px; /* Espaçamento interno */
+}
+
+/* Estiliza o ícone de pin */
+#pin {
+    width: 33px; /* Largura fixa */
+    top: 10px; /* Distância do topo */
+    right: 1px; /* Distância da direita */
+    position: absolute; /* Posicionamento absoluto */
+    cursor: pointer; /* Muda o cursor para pointer */
+}
+
+/* Media query para telas menores que 570px */
+@media (max-width: 570px) {
+    #sidebar {
+        left: -100px; /* Ajusta posição inicial */
+        width: 150px; /* Reduz largura */
+    }
+    #conteudo {
+        margin-left: 50px; /* Mantém margem inicial */
+    }
+    #data-login {
+        font-size: 8px; /* Reduz tamanho da fonte */
+    }
+    #options {
+        padding: 0; /* Remove padding */
+    }
+    .option {
+        padding: 5px; /* Reduz padding */
+        margin: 2px; /* Reduz margem */
+    }
+    #sidebar:hover + #conteudo {
+        transition-delay: 50ms; /* Atraso na transição */
+        margin-left: 150px; /* Ajusta margem ao exibir a barra */
+    }
+}

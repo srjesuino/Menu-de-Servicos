@@ -10,7 +10,7 @@ class Login
     {
         try {
             // Tenta estabelecer uma conexão com o serviço SOAP via WSDL
-            $this->conn = new SoapClient("http://192.168.10.194:8180/ws0201/MADWS001.apw?WSDL");
+            $this->conn = new SoapClient("http://192.168.10.***:****/ws0201/MADWS001.apw?WSDL");
         } catch (Exception $e) {
             // Encerra a execução e exibe mensagem de erro se a conexão falhar
             die("Erro ao conectar ao serviço: " . $e->getMessage());

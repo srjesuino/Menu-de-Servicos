@@ -1,0 +1,221 @@
+/* Estiliza o corpo da página */
+body {
+    height: auto; /* Altura automática */
+    display: flex; /* Usa flexbox para layout */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+}
+
+/* Estiliza o formulário */
+form {
+    display: flex; /* Usa flexbox */
+    flex-direction: row; /* Alinha itens em linha */
+    justify-content: center; /* Centraliza conteúdo */
+    margin: 0; /* Remove margens */
+    height: 65vh; /* Altura de 65% da viewport */
+    width: 50%; /* Largura de 50% */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; /* Sombra estilizada */
+    border-radius: 10px; /* Bordas arredondadas (sobrescrito abaixo) */
+    background: transparent; /* Fundo transparente */
+    min-width: 275px; /* Largura mínima */
+    border-radius: 20px; /* Bordas arredondadas */
+    background-color: #58AF9C; /* Cor de fundo verde */
+}
+
+/* Estiliza o container do formulário */
+#form-container {
+    display: flex; /* Usa flexbox */
+    flex-direction: column; /* Alinha itens em coluna */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    width: 70%; /* Largura de 70% */
+    background-color: white; /* Fundo branco */
+    border-top-right-radius: 20px; /* Canto superior direito arredondado */
+    border-bottom-right-radius: 20px; /* Canto inferior direito arredondado */
+}
+
+/* Estiliza a seção de boas-vindas */
+#welcome {
+    display: flex; /* Usa flexbox */
+    flex-direction: column; /* Alinha itens em coluna */
+    margin: 20px; /* Margem externa */
+    text-align: center; /* Centraliza texto */
+    width: 40%; /* Largura de 40% */
+    padding: 8px; /* Espaçamento interno */
+    background-color: #58AF9C; /* Cor de fundo verde */
+}
+
+/* Estiliza imagens */
+img {
+    width: 100%; /* Largura total */
+}
+
+/* Estiliza todos os inputs */
+input {
+    width: 100%; /* Largura total */
+    text-align: center; /* Centraliza texto */
+}
+
+/* Estiliza inputs de texto e senha */
+input[type="text"], 
+input[type="password"] {
+    border-top: none; /* Remove borda superior */
+    border-left: none; /* Remove borda esquerda */
+    border-right: none; /* Remove borda direita */
+    width: 70%; /* Largura de 70% */
+    margin-bottom: 45px; /* Margem inferior */
+    height: 31px; /* Altura fixa */
+    background-color: transparent; /* Fundo transparente */
+}
+
+/* Efeito hover nos inputs de texto e senha */
+input[type="text"]:hover, 
+input[type="password"]:hover {
+    cursor: pointer; /* Muda o cursor para pointer */
+}
+
+/* Estiliza o botão de envio */
+input[type="submit"] {
+    width: 80px; /* Largura fixa */
+    margin-top: 3px; /* Margem superior */
+}
+
+/* Estiliza o container de boas-vindas */
+#welcome-container {
+    display: flex; /* Usa flexbox */
+    flex-direction: column; /* Alinha itens em coluna */
+    justify-content: center; /* Centraliza conteúdo */
+    height: 100%; /* Altura total */
+}
+
+/* Estiliza o label dentro de #welcome */
+#welcome label {
+    font-size: 13px; /* Tamanho da fonte */
+}
+
+/* Estiliza o título h5 */
+h5 {
+    color: white; /* Cor do texto */
+    font-style: italic; /* Estilo itálico */
+    margin-bottom: 20px; /* Margem inferior */
+}
+
+/* Media query para telas menores que 720px */
+@media (max-width: 720px) {
+    form {
+        flex-direction: column; /* Alinha itens em coluna */
+        width: 80%; /* Aumenta a largura */
+    }
+    #form-container {
+        width: 100%; /* Largura total */
+        height: 70%; /* Altura de 70% */
+        border-top-right-radius: 0; /* Remove borda superior direita */
+        border-bottom-left-radius: 20px; /* Canto inferior esquerdo arredondado */
+    }
+    #welcome {
+        align-items: center; /* Centraliza itens */
+        width: 100%; /* Largura total */
+        margin: 0; /* Remove margens */
+        height: 30%; /* Altura de 30% */
+        padding: 15px; /* Espaçamento interno */
+        border-top-left-radius: 20px; /* Canto superior esquerdo arredondado */
+        border-top-right-radius: 20px; /* Canto superior direito arredondado */
+    }
+    #welcome-container {
+        margin: 0; /* Remove margens */
+    }
+    img {
+        width: 80%; /* Reduz largura */
+        margin: 5px; /* Margem externa */
+    }
+    #welcome label {
+        font-size: 12px; /* Reduz tamanho da fonte */
+    }
+    #welcome h5 {
+        font-size: 17px; /* Reduz tamanho da fonte */
+        margin: 5px; /* Margem externa */
+    }
+    /* Media query aninhada para altura menor que 825px */
+    @media (max-height: 825px) {
+        #welcome {
+            height: 40%; /* Aumenta altura */
+        }
+    }
+}
+
+/* Estiliza o botão com classe .button-3 */
+.button-3 {
+    appearance: none; /* Remove estilo padrão */
+    background-color: #2ea44f; /* Cor de fundo verde */
+    border: 1px solid rgba(27, 31, 35, .15); /* Borda sutil */
+    border-radius: 6px; /* Bordas arredondadas */
+    box-shadow: rgba(27, 31, 35, .1) 0 1px 0; /* Sombra leve */
+    box-sizing: border-box; /* Inclui borda no cálculo de tamanho */
+    color: #fff; /* Cor do texto */
+    cursor: pointer; /* Muda o cursor para pointer */
+    display: inline-block; /* Exibição em linha */
+    font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"; /* Fontes padrão */
+    font-size: 14px; /* Tamanho da fonte */
+    font-weight: 600; /* Peso da fonte */
+    line-height: 20px; /* Altura da linha */
+    padding: 6px 16px; /* Espaçamento interno */
+    position: relative; /* Posicionamento relativo */
+    text-align: center; /* Centraliza texto */
+    text-decoration: none; /* Remove sublinhado */
+    user-select: none; /* Impede seleção de texto */
+    -webkit-user-select: none; /* Impede seleção de texto no Webkit */
+    touch-action: manipulation; /* Melhora interação em telas touch */
+    vertical-align: middle; /* Alinhamento vertical */
+    white-space: nowrap; /* Impede quebra de linha */
+}
+
+/* Remove sombra e contorno quando o botão não está focado visivelmente */
+.button-3:focus:not(:focus-visible):not(.focus-visible) {
+    box-shadow: none; /* Remove sombra */
+    outline: none; /* Remove contorno */
+}
+
+/* Efeito hover no botão */
+.button-3:hover {
+    background-color: #2c974b; /* Altera cor de fundo */
+}
+
+/* Efeito de foco no botão */
+.button-3:focus {
+    box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px; /* Adiciona sombra de foco */
+    outline: none; /* Remove contorno */
+}
+
+/* Estiliza o botão quando desativado */
+.button-3:disabled {
+    background-color: #94d3a2; /* Cor de fundo mais clara */
+    border-color: rgba(27, 31, 35, .1); /* Borda sutil */
+    color: rgba(255, 255, 255, .8); /* Cor do texto com opacidade */
+    cursor: default; /* Cursor padrão */
+}
+
+/* Efeito ativo (clique) no botão */
+.button-3:active {
+    background-color: #298e46; /* Altera cor de fundo */
+    box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset; /* Sombra interna */
+}
+
+/* Estiliza o ícone de olho */
+.lnr-eye {
+    position: relative; /* Posicionamento relativo */
+    top: 5px; /* Distância do topo */
+    right: 22px; /* Distância da direita */
+    cursor: pointer; /* Muda o cursor para pointer */
+}
+
+/* Estiliza o container da senha */
+#senha {
+    justify-content: center; /* Centraliza conteúdo */
+    display: flex; /* Usa flexbox */
+    width: 100%; /* Largura total */
+}
+
+/* Estiliza o input dentro de #senha */
+#senha input {
+    margin-left: 16px; /* Margem à esquerda */
+}

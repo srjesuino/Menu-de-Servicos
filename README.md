@@ -16,7 +16,7 @@ Este sistema atua como um **hub digital** que melhora a eficiência operacional 
 - **Notificações e Alertas**: Exibição de mensagens e avisos sobre eventos importantes dentro do sistema.
 - **Responsividade e Usabilidade**: Design adaptável para diferentes dispositivos, com suporte a telas desktop e móveis.
 
-[Apresentação](/Apresentacao/Login_Menu.gif)
+[Apresentação](Images/Tela_Login_Menu.gif)
 
 ## 🛠️ Tecnologias Utilizadas
 - **Back-end**: PHP com suporte a comunicação via SOAP para autenticação e integração com outros sistemas.

@@ -32,7 +32,7 @@ Este sistema atua como um **hub digital** que melhora a eficiência operacional 
 - Suporte para autenticação multifator (MFA) para reforço da segurança.
 
 ## 📞 Contato
-Se tiver dúvidas ou quiser saber mais sobre este projeto, entre em contato via [seu email] ou pelo LinkedIn.
+Se tiver dúvidas ou quiser saber mais sobre este projeto, entre em contato via jesuinodeoliveira97@gmail.com ou pelo LinkedIn www.linkedin.com/in/gabriel-j-2157671a1.
 
 ---
 Feito por Gabriel Jesuino de Oliveira
